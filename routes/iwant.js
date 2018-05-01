@@ -22,10 +22,10 @@ router.post('/', function(req, res, next) {
         "stuff":stuff
     }, function(err, doc) {
         if (err) {
-            res.send('Error');
+            res.send({"error": err});
         }
         else {
-            res.send(user + ' wants ' + stuff);
+            res.send({"response": user + ' wants ' + stuff});
         }
     });
     // res.send(user + ' wants ' + stuff);
